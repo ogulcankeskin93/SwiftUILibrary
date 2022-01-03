@@ -42,7 +42,7 @@ struct AnchorPreference: View {
         .overlayPreferenceValue(BoundsPreferenceKey.self) { preferences in
                 GeometryReader { geometry in
                     preferences.map { val in
-                        // Val: Anchor<CGRect>
+                        // val: Anchor<CGRect>
                         return Rectangle()
                             .stroke()
                             .frame(

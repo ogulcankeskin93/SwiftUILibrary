@@ -11,7 +11,9 @@ import SwiftUI
 struct SwiftUILibraryApp: App {
     var body: some Scene {
         WindowGroup {
-            GeometryPreferenceKey()
+            TutorialContentView {
+                ConcreteTutorialView()
+            }
         }
     }
 }

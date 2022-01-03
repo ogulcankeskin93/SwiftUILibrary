@@ -25,6 +25,7 @@ struct GeometryPreferenceKey: View {
                     }
                 }
             }
+//            .onPreferenceChange(<#T##key: PreferenceKey.Protocol##PreferenceKey.Protocol#>, perform: <#T##(Equatable) -> Void#>)
             .overlayPreferenceValue(SizeKey.self, { value in
                 Text("\(value)")
             })

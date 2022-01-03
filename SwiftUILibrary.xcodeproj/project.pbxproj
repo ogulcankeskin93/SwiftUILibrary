@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9254932B27837FF700634846 /* TutorialContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254932A27837FF700634846 /* TutorialContentView.swift */; };
+		9254932D2783994500634846 /* SizePreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254932C2783994500634846 /* SizePreferenceKey.swift */; };
 		A516DF58277EEFF4005DC5F9 /* SwiftUILibraryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DF57277EEFF4005DC5F9 /* SwiftUILibraryApp.swift */; };
 		A516DF5C277EEFF7005DC5F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A516DF5B277EEFF7005DC5F9 /* Assets.xcassets */; };
 		A516DF5F277EEFF7005DC5F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A516DF5E277EEFF7005DC5F9 /* Preview Assets.xcassets */; };
@@ -23,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		925493282783727E00634846 /* PreferenceDocumentation.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PreferenceDocumentation.md; sourceTree = "<group>"; };
+		9254932A27837FF700634846 /* TutorialContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialContentView.swift; sourceTree = "<group>"; };
+		9254932C2783994500634846 /* SizePreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizePreferenceKey.swift; sourceTree = "<group>"; };
 		A516DF54277EEFF4005DC5F9 /* SwiftUILibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A516DF57277EEFF4005DC5F9 /* SwiftUILibraryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILibraryApp.swift; sourceTree = "<group>"; };
 		A516DF5B277EEFF7005DC5F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9254932927837FEE00634846 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				9254932A27837FF700634846 /* TutorialContentView.swift */,
+				9254932C2783994500634846 /* SizePreferenceKey.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
 		A516DF4B277EEFF4005DC5F9 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +103,7 @@
 		A516DF6F277EF3E6005DC5F9 /* Samples */ = {
 			isa = PBXGroup;
 			children = (
+				9254932927837FEE00634846 /* Tutorial */,
 				A58401D12781DF4500B84CD2 /* PreferenceKey */,
 				A516DF66277EF01B005DC5F9 /* BackgroundBootcamp.swift */,
 				A516DF70277F0BB6005DC5F9 /* ButtonStyleBootcamp.swift */,
@@ -110,6 +125,7 @@
 		A58401D12781DF4500B84CD2 /* PreferenceKey */ = {
 			isa = PBXGroup;
 			children = (
+				925493282783727E00634846 /* PreferenceDocumentation.md */,
 				A58401C627819C5000B84CD2 /* GeometryPreferenceKey.swift */,
 				A58401CB2781AFBA00B84CD2 /* AnchorPreference.swift */,
 				A58401CD2781C23900B84CD2 /* AdvanceGrid.swift */,
@@ -194,11 +210,13 @@
 				A58401CA2781A9F000B84CD2 /* View+Extension.swift in Sources */,
 				A516DF6B277EF01B005DC5F9 /* MaskViewBootcamp.swift in Sources */,
 				A58401C727819C5000B84CD2 /* GeometryPreferenceKey.swift in Sources */,
+				9254932B27837FF700634846 /* TutorialContentView.swift in Sources */,
 				A516DF58277EEFF4005DC5F9 /* SwiftUILibraryApp.swift in Sources */,
 				A58401D02781D2F300B84CD2 /* TutorialView.swift in Sources */,
 				A58401CC2781AFBA00B84CD2 /* AnchorPreference.swift in Sources */,
 				A516DF71277F0BB6005DC5F9 /* ButtonStyleBootcamp.swift in Sources */,
 				A516DF6E277EF215005DC5F9 /* MatchedGeometryEffectBootcamp.swift in Sources */,
+				9254932D2783994500634846 /* SizePreferenceKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@ struct SwiftUILibraryApp: App {
     var body: some Scene {
         WindowGroup {
             TutorialContentView {
-                ConcreteTutorialView()
+                TutorialView()
             }
         }
     }

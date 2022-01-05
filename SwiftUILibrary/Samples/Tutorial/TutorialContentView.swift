@@ -9,47 +9,6 @@ import SwiftUI
 
 fileprivate struct OverallSizeKey: SizePreferenceKey {}
 
-struct TutorialContent {
-    var bounds: Anchor<CGRect>
-    var item: TutorialContentItem?
-    var isHidden: Bool
-}
-
-public struct TutorialContentItem {
-    var location: TutorialContentRelativeLocation
-    var text: String
-    public enum TutorialContentRelativeLocation {
-        case left, top, right, bottom, topLeft, topRight, bottomLeft, bottomRight
-    }
-}
-
-struct TutorialPreferenceKey: PreferenceKey {
-    typealias Value = [TutorialContent]
-    
-    static var defaultValue: Value { [] }
-    
-    static func reduce(
-        value: inout Value,
-        nextValue: () -> Value
-    ) {
-        value.append(contentsOf: nextValue())
-    }
-}
-
-public struct TutorialContentAnchoringViewModifier: ViewModifier {
-    let item: TutorialContentItem?
-    let isHidden: Bool
-    
-    public func body(content: Content) -> some View {
-        content
-            .anchorPreference(
-                key: TutorialPreferenceKey.self,
-                value: .bounds
-            ) {
-                [TutorialContent(bounds: $0, item: item, isHidden: isHidden)]
-            }
-    }
-}
 
 public struct TutorialContentView<Content: View>: View {
     @State private var overallSize: CGSize = .zero
@@ -64,8 +23,8 @@ public struct TutorialContentView<Content: View>: View {
             .overlayPreferenceValue(TutorialPreferenceKey.self) { preferences in
                 GeometryReader { geometry in
                     ZStack {
-                        Color.gray.opacity(0.6)
-                            .ignoresSafeArea()
+//                        Color.gray.opacity(0.6)
+//                            .ignoresSafeArea()
                         
                         ForEach(0..<preferences.count) { index in
                             let tutorialContent = preferences[index]
@@ -162,87 +121,10 @@ public struct TutorialContentView<Content: View>: View {
     }
 }
 
-public struct ConcreteTutorialView: View {
-    public var body: some View {
-        ZStack {
-            Color.blue.opacity(0.3)
-            
-            VStack(spacing: 20) {
-                VStack {
-                    TextField("Name", text: .constant(""))
-                        .extensionTextFieldView(roundedCornes: 6, startColor: .white, endColor: .purple)
-                        .placeTutorialContent(
-                            item: .init(location: .top, text: "This is Name Textfield"),
-                            isHidden: false
-                        )
-                    
-                    TextField("Password", text: .constant(""))
-                        .extensionTextFieldView(roundedCornes: 6, startColor: .pink.opacity(0.5), endColor: .white.opacity(0.6))
-                        .placeTutorialContent(
-                            item: .init(location: .bottom, text: "This is Password Textfield"),
-                            isHidden: false
-                        )
-                }
-                .padding(.horizontal, 30)
-                
-                HStack {
-                    Button { } label: {
-                        Text("Login")
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(height: 45)
-                            .frame(maxWidth: .infinity)
-                            .background(Color.blue)
-                            .cornerRadius(8)
-                            .shadow(color: .blue.opacity(0.3), radius: 10, x: 0.0, y: 10)
-                    }
-                    .placeTutorialContent(
-                        item: .init(location: .right, text: "This is Login Button"),
-                        isHidden: false
-                    )
-                    
-                    Button { } label: {
-                        Text("Sign Up")
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(height: 45)
-                            .frame(maxWidth: .infinity)
-                            .background(Color.blue)
-                            .cornerRadius(8)
-                            .shadow(color: .blue.opacity(0.3), radius: 10, x: 0.0, y: 10)
-                    }
-                    .placeTutorialContent(
-                        item: .init(location: .left, text: "This is Register Button"),
-                        isHidden: false
-                    )
-                }
-                .padding(.horizontal, 24)
-            }
-            
-            Button {
-                
-            } label: {
-                Text("Tutorial")
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(height: 45)
-                    .frame(maxWidth: .infinity, alignment: .bottom)
-                    .background(Color.cyan)
-                    .cornerRadius(8)
-                    .shadow(color: .blue.opacity(0.3), radius: 10, x: 0.0, y: 10)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
-            .padding(.horizontal, 10)
-            .padding(.bottom, 50)
-        }
-        .ignoresSafeArea()
-    }
-}
-
 struct TutorialContentView_Previews: PreviewProvider {
     static var previews: some View {
         TutorialContentView {
-            ConcreteTutorialView()
+            TutorialView()
         }
     }
 }

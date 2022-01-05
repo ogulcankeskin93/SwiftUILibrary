@@ -2,47 +2,38 @@
 //  TutorialView.swift
 //  SwiftUILibrary
 //
-//  Created by Ogulcan Keskin on 2.01.2022.
+//  Created by ogulcan keskin on 5.01.2022.
 //
 
 import SwiftUI
 
-struct AnchoredSizePreferenceKey<Item: Hashable>: PreferenceKey {
-    typealias Value = [Item: Anchor<CGRect>]
-    
-    static var defaultValue: Value { [:] }
-    
-    static func reduce(
-        value: inout Value,
-        nextValue: () -> Value
-    ) {
-        value.merge(nextValue()) { $1 }
-    }
-}
-
 struct TutorialView: View {
-    @State private var index = 0
+    @StateObject var viewModel = TutorialViewModel()
     
-    @State var value: String = ""
-    
-    var body: some View {
-        
+    public var body: some View {
         ZStack {
             Color.blue.opacity(0.3)
+            
             VStack(spacing: 20) {
                 VStack {
                     TextField("Name", text: .constant(""))
                         .extensionTextFieldView(roundedCornes: 6, startColor: .white, endColor: .purple)
-                    TextField("Name", text: .constant(""))
-                        .extensionTextFieldView(roundedCornes: 6, startColor: .pink.opacity(0.5), endColor: .white.opacity(0.6))
+                        .placeTutorialContent(
+                            item: viewModel.tutorials[.name],
+                            isHidden: !viewModel.activeTutorials.contains(.name)
+                        )
                     
+                    TextField("Password", text: .constant(""))
+                        .extensionTextFieldView(roundedCornes: 6, startColor: .pink.opacity(0.5), endColor: .white.opacity(0.6))
+                        .placeTutorialContent(
+                            item: viewModel.tutorials[.password],
+                            isHidden: !viewModel.activeTutorials.contains(.password)
+                        )
                 }
                 .padding(.horizontal, 30)
                 
                 HStack {
-                    Button {
-                        
-                    } label: {
+                    Button { } label: {
                         Text("Login")
                             .foregroundColor(.white)
                             .padding()
@@ -52,16 +43,12 @@ struct TutorialView: View {
                             .cornerRadius(8)
                             .shadow(color: .blue.opacity(0.3), radius: 10, x: 0.0, y: 10)
                     }
-                    .anchorPreference(
-                        key: AnchoredSizePreferenceKey<String>.self,
-                        value: .bounds,
-                        transform: { anchor in
-                            ["login": anchor]
-                        })
+                    .placeTutorialContent(
+                        item: viewModel.tutorials[.login],
+                        isHidden: !viewModel.activeTutorials.contains(.login)
+                    )
                     
-                    Button {
-                        
-                    } label: {
+                    Button { } label: {
                         Text("Sign Up")
                             .foregroundColor(.white)
                             .padding()
@@ -71,21 +58,16 @@ struct TutorialView: View {
                             .cornerRadius(8)
                             .shadow(color: .blue.opacity(0.3), radius: 10, x: 0.0, y: 10)
                     }
-                    .anchorPreference(
-                        key: AnchoredSizePreferenceKey<String>.self,
-                        value: .bounds) { anchor in
-                            ["signup": anchor]
-                        }
+                    .placeTutorialContent(
+                        item: viewModel.tutorials[.signup],
+                        isHidden: !viewModel.activeTutorials.contains(.signup)
+                    )
                 }
                 .padding(.horizontal, 24)
-                
-                
             }
             
-            
             Button {
-                index += 1
-                value = index % 2 == 0 ? "login" : "signup"
+                viewModel.nextTutorial()
             } label: {
                 Text("Tutorial")
                     .foregroundColor(.white)
@@ -99,33 +81,8 @@ struct TutorialView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
             .padding(.horizontal, 10)
             .padding(.bottom, 50)
-            
-            
         }
         .ignoresSafeArea()
-        .if(index != 0, transform: { view in
-            view
-                .overlayPreferenceValue(
-                    AnchoredSizePreferenceKey<String>.self) { anchor in
-                        GeometryReader { geometry in
-                            if let value = anchor[self.value] {
-                                let temp = geometry[value]
-                                Rectangle()
-                                    .fill(.red)
-                                    .frame(
-                                        width: temp.width,
-                                        height: temp.height
-                                    )
-                                    .offset(
-                                        x: temp.minX,
-                                        y: temp.minY
-                                    )
-                            }
-                        }
-                    }
-        })
-            
-            
     }
 }
 
@@ -134,8 +91,6 @@ struct TutorialView_Previews: PreviewProvider {
         TutorialView()
     }
 }
-
-
 
 extension TextField {
     func extensionTextFieldView(roundedCornes: CGFloat, startColor: Color,  endColor: Color) -> some View {

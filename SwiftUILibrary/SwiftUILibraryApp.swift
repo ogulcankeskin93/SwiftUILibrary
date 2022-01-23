@@ -9,11 +9,10 @@ import SwiftUI
 
 @main
 struct SwiftUILibraryApp: App {
+    @State var xoxo = "blop"
     var body: some Scene {
         WindowGroup {
-            TutorialContentView {
-                TutorialView()
-            }
+            FloatingPlaceHolderTextField(text: $xoxo, placeHolder: "CustomTextField", image: "gear")
         }
     }
 }

@@ -20,6 +20,7 @@
 		A516DF6B277EF01B005DC5F9 /* MaskViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DF67277EF01B005DC5F9 /* MaskViewBootcamp.swift */; };
 		A516DF6E277EF215005DC5F9 /* MatchedGeometryEffectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DF6D277EF215005DC5F9 /* MatchedGeometryEffectBootcamp.swift */; };
 		A516DF71277F0BB6005DC5F9 /* ButtonStyleBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DF70277F0BB6005DC5F9 /* ButtonStyleBootcamp.swift */; };
+		A558783A279D8D1D005EE8EE /* FloatingPlaceHolderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5587839279D8D1D005EE8EE /* FloatingPlaceHolderTextField.swift */; };
 		A58401C727819C5000B84CD2 /* GeometryPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58401C627819C5000B84CD2 /* GeometryPreferenceKey.swift */; };
 		A58401CA2781A9F000B84CD2 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58401C92781A9F000B84CD2 /* View+Extension.swift */; };
 		A58401CC2781AFBA00B84CD2 /* AnchorPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58401CB2781AFBA00B84CD2 /* AnchorPreference.swift */; };
@@ -43,6 +44,7 @@
 		A516DF67277EF01B005DC5F9 /* MaskViewBootcamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskViewBootcamp.swift; sourceTree = "<group>"; };
 		A516DF6D277EF215005DC5F9 /* MatchedGeometryEffectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedGeometryEffectBootcamp.swift; sourceTree = "<group>"; };
 		A516DF70277F0BB6005DC5F9 /* ButtonStyleBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleBootcamp.swift; sourceTree = "<group>"; };
+		A5587839279D8D1D005EE8EE /* FloatingPlaceHolderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPlaceHolderTextField.swift; sourceTree = "<group>"; };
 		A58401C627819C5000B84CD2 /* GeometryPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryPreferenceKey.swift; sourceTree = "<group>"; };
 		A58401C92781A9F000B84CD2 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		A58401CB2781AFBA00B84CD2 /* AnchorPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorPreference.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		A516DF6F277EF3E6005DC5F9 /* Samples */ = {
 			isa = PBXGroup;
 			children = (
+				A5587837279D8C97005EE8EE /* UIElement */,
 				9254932927837FEE00634846 /* Tutorial */,
 				A58401D12781DF4500B84CD2 /* PreferenceKey */,
 				A516DF66277EF01B005DC5F9 /* BackgroundBootcamp.swift */,
@@ -121,6 +124,22 @@
 				A516DF6D277EF215005DC5F9 /* MatchedGeometryEffectBootcamp.swift */,
 			);
 			path = Samples;
+			sourceTree = "<group>";
+		};
+		A5587837279D8C97005EE8EE /* UIElement */ = {
+			isa = PBXGroup;
+			children = (
+				A5587838279D8CA2005EE8EE /* TextField */,
+			);
+			path = UIElement;
+			sourceTree = "<group>";
+		};
+		A5587838279D8CA2005EE8EE /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				A5587839279D8D1D005EE8EE /* FloatingPlaceHolderTextField.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		A58401C82781A9DB00B84CD2 /* Extension */ = {
@@ -220,6 +239,7 @@
 				A516DF69277EF01B005DC5F9 /* DotAnimation.swift in Sources */,
 				A58401CE2781C23900B84CD2 /* AdvanceGrid.swift in Sources */,
 				A58401CA2781A9F000B84CD2 /* View+Extension.swift in Sources */,
+				A558783A279D8D1D005EE8EE /* FloatingPlaceHolderTextField.swift in Sources */,
 				A516DF6B277EF01B005DC5F9 /* MaskViewBootcamp.swift in Sources */,
 				A58401C727819C5000B84CD2 /* GeometryPreferenceKey.swift in Sources */,
 				9254932B27837FF700634846 /* TutorialContentView.swift in Sources */,

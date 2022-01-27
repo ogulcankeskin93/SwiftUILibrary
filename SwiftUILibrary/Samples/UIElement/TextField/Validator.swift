@@ -7,16 +7,32 @@
 
 import Foundation
 
+enum ValidatorKey {
+    case email
+    case nonEmpty
+    case profanity
+}
+
+extension ValidatorKey {
+    func validate(_ text: String) -> String {
+        switch self {
+        case .email:
+            return EmailValidator().validate(text)
+        case .profanity:
+            return ProfanityValidator().validate(text)
+        default:
+            return ""
+        }
+    }
+}
+
 protocol Validator {
-    var isValid: Bool { get }
     func validate(_ text: String) -> String
 }
 
-class EmailValidator: Validator {
-    var isValid: Bool = false
-    
+struct EmailValidator: Validator {
     func validate(_ text: String) -> String {
-        var valid = true
+        guard !text.isEmpty else { return "" }
         let emailRegEx = "[A-Z0-9a-z.-_]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,3}"
         
         do {
@@ -26,30 +42,26 @@ class EmailValidator: Validator {
             
             if results.count == 0
             {
-                valid = false
+//                valid = false
                 return "Invalid"
             }
             
         } catch let error as NSError {
             print("invalid regex: \(error.localizedDescription)")
-            valid = false
+//            valid = false
             return "Error"
         }
         
-        isValid = valid
         return ""
     }
 }
 
-class ProfanityValidator: Validator {
-    var isValid: Bool = false
-    
+struct ProfanityValidator: Validator {    
     func validate(_ text: String) -> String {
-        isValid = !text.contains("fuck")
-        if isValid {
-            return ""
-        } else {
+        if text.contains("fuck") {
             return "No no no no"
+        } else {
+            return ""
         }
     }
 }

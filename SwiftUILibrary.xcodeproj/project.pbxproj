@@ -20,9 +20,11 @@
 		A516DF6B277EF01B005DC5F9 /* MaskViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DF67277EF01B005DC5F9 /* MaskViewBootcamp.swift */; };
 		A516DF6E277EF215005DC5F9 /* MatchedGeometryEffectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DF6D277EF215005DC5F9 /* MatchedGeometryEffectBootcamp.swift */; };
 		A516DF71277F0BB6005DC5F9 /* ButtonStyleBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DF70277F0BB6005DC5F9 /* ButtonStyleBootcamp.swift */; };
-		A543ED8A27A07B6E0043C51E /* FloatingPlaceHolderTextField copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A543ED8927A07B6E0043C51E /* FloatingPlaceHolderTextField copy.swift */; };
+		A5192B4427A1DE98008E7CB7 /* ValidatorPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5192B4327A1DE98008E7CB7 /* ValidatorPreferenceKey.swift */; };
+		A5192B4627A1DF4F008E7CB7 /* ValidatorPrepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5192B4527A1DF4F008E7CB7 /* ValidatorPrepView.swift */; };
+		A543ED8A27A07B6E0043C51E /* FloatingPlaceHolderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A543ED8927A07B6E0043C51E /* FloatingPlaceHolderTextField.swift */; };
 		A543ED8C27A08A810043C51E /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A543ED8B27A08A810043C51E /* Validator.swift */; };
-		A558783A279D8D1D005EE8EE /* FloatingPlaceHolderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5587839279D8D1D005EE8EE /* FloatingPlaceHolderTextField.swift */; };
+		A558783A279D8D1D005EE8EE /* Copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5587839279D8D1D005EE8EE /* Copy.swift */; };
 		A58401C727819C5000B84CD2 /* GeometryPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58401C627819C5000B84CD2 /* GeometryPreferenceKey.swift */; };
 		A58401CA2781A9F000B84CD2 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58401C92781A9F000B84CD2 /* View+Extension.swift */; };
 		A58401CC2781AFBA00B84CD2 /* AnchorPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58401CB2781AFBA00B84CD2 /* AnchorPreference.swift */; };
@@ -46,9 +48,11 @@
 		A516DF67277EF01B005DC5F9 /* MaskViewBootcamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskViewBootcamp.swift; sourceTree = "<group>"; };
 		A516DF6D277EF215005DC5F9 /* MatchedGeometryEffectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedGeometryEffectBootcamp.swift; sourceTree = "<group>"; };
 		A516DF70277F0BB6005DC5F9 /* ButtonStyleBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleBootcamp.swift; sourceTree = "<group>"; };
-		A543ED8927A07B6E0043C51E /* FloatingPlaceHolderTextField copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloatingPlaceHolderTextField copy.swift"; sourceTree = "<group>"; };
+		A5192B4327A1DE98008E7CB7 /* ValidatorPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorPreferenceKey.swift; sourceTree = "<group>"; };
+		A5192B4527A1DF4F008E7CB7 /* ValidatorPrepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorPrepView.swift; sourceTree = "<group>"; };
+		A543ED8927A07B6E0043C51E /* FloatingPlaceHolderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPlaceHolderTextField.swift; sourceTree = "<group>"; };
 		A543ED8B27A08A810043C51E /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		A5587839279D8D1D005EE8EE /* FloatingPlaceHolderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPlaceHolderTextField.swift; sourceTree = "<group>"; };
+		A5587839279D8D1D005EE8EE /* Copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copy.swift; sourceTree = "<group>"; };
 		A58401C627819C5000B84CD2 /* GeometryPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryPreferenceKey.swift; sourceTree = "<group>"; };
 		A58401C92781A9F000B84CD2 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		A58401CB2781AFBA00B84CD2 /* AnchorPreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorPreference.swift; sourceTree = "<group>"; };
@@ -141,9 +145,11 @@
 		A5587838279D8CA2005EE8EE /* TextField */ = {
 			isa = PBXGroup;
 			children = (
-				A543ED8927A07B6E0043C51E /* FloatingPlaceHolderTextField copy.swift */,
-				A5587839279D8D1D005EE8EE /* FloatingPlaceHolderTextField.swift */,
+				A543ED8927A07B6E0043C51E /* FloatingPlaceHolderTextField.swift */,
+				A5192B4527A1DF4F008E7CB7 /* ValidatorPrepView.swift */,
+				A5587839279D8D1D005EE8EE /* Copy.swift */,
 				A543ED8B27A08A810043C51E /* Validator.swift */,
+				A5192B4327A1DE98008E7CB7 /* ValidatorPreferenceKey.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -239,14 +245,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				92C2A1DF278616B7007B451C /* TutorialView.swift in Sources */,
-				A543ED8A27A07B6E0043C51E /* FloatingPlaceHolderTextField copy.swift in Sources */,
+				A543ED8A27A07B6E0043C51E /* FloatingPlaceHolderTextField.swift in Sources */,
 				92C2A1E1278616EA007B451C /* TutorialCore.swift in Sources */,
 				92C2A1E327861767007B451C /* TutorialViewModel.swift in Sources */,
 				A516DF6A277EF01B005DC5F9 /* BackgroundBootcamp.swift in Sources */,
 				A516DF69277EF01B005DC5F9 /* DotAnimation.swift in Sources */,
 				A58401CE2781C23900B84CD2 /* AdvanceGrid.swift in Sources */,
 				A58401CA2781A9F000B84CD2 /* View+Extension.swift in Sources */,
-				A558783A279D8D1D005EE8EE /* FloatingPlaceHolderTextField.swift in Sources */,
+				A558783A279D8D1D005EE8EE /* Copy.swift in Sources */,
+				A5192B4627A1DF4F008E7CB7 /* ValidatorPrepView.swift in Sources */,
 				A516DF6B277EF01B005DC5F9 /* MaskViewBootcamp.swift in Sources */,
 				A58401C727819C5000B84CD2 /* GeometryPreferenceKey.swift in Sources */,
 				9254932B27837FF700634846 /* TutorialContentView.swift in Sources */,
@@ -255,6 +262,7 @@
 				A58401D02781D2F300B84CD2 /* test.swift in Sources */,
 				A58401CC2781AFBA00B84CD2 /* AnchorPreference.swift in Sources */,
 				A516DF71277F0BB6005DC5F9 /* ButtonStyleBootcamp.swift in Sources */,
+				A5192B4427A1DE98008E7CB7 /* ValidatorPreferenceKey.swift in Sources */,
 				A516DF6E277EF215005DC5F9 /* MatchedGeometryEffectBootcamp.swift in Sources */,
 				9254932D2783994500634846 /* PreferenceProtocol.swift in Sources */,
 			);

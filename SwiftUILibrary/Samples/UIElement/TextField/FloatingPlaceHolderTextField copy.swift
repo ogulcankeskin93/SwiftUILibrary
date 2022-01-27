@@ -11,13 +11,11 @@ struct FloatingPlaceHolderTextField: View {
     @Binding var text: String
     let placeHolder: String
     let image: String
-    //let config: Config
+    let config: Config
     
     @State private var isTapped = false
     @State private var attemp = CGFloat(0)
     @State private var errorDesc = ""
-    
-    @ObservedObject private var config = FloatingLabelTextFieldConfig()
 
     @Namespace var namespace
 
@@ -38,6 +36,7 @@ struct FloatingPlaceHolderTextField: View {
         self._text = text
         self.placeHolder = placeHolder
         self.image = image
+        self.config = config
     }
     
     func validate() {
@@ -172,13 +171,4 @@ struct Shake: GeometryEffect {
             )
         )
     }
-}
-
-
-@available(iOS 13.0, *)
-class FloatingLabelTextFieldConfig: ObservableObject {
-    @Published var backgroundColor: Color = .cyan.opacity(0.09)
-    @Published var placeHolderColor: Color = .gray
-    @Published var placeHolderHighlightedColor: Color = .accentColor
-    @Published var errorColor: Color = .red
 }

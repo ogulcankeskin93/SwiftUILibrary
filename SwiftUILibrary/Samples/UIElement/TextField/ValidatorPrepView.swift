@@ -41,7 +41,7 @@ extension ValidatorPrepView {
         
         private func setupValidation() {
             $inputText
-                .map { $0.count > 3 ? ValidationState.valid : .invalid("Must be at least 4 characters") }
+                .markInvalid(validateEmpty: true, via: [isNotEmpty, greaterThan_3])
                 .assign(to: \.inputTextValid, on: self)
                 .store(in: &cancellables)
         }

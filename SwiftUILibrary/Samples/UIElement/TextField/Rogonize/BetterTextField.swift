@@ -88,11 +88,11 @@ struct BetterTextField: View {
                 .fill(config.backgroundColor)
                 .overlay(
                     RoundedRectangle(cornerRadius: 8)
-                        .stroke(validation != .valid ? config.errorColor : .clear, lineWidth: 1)
+                        .stroke(validation?.isInvalid == true ? config.errorColor : .clear, lineWidth: 1)
                 )
         )
         .overlay(alignment: .topLeading) {
-            if validation != .valid {
+            if validation?.isInvalid == true {
                 Text("todo desc")
                     .background(Color.white.opacity(0.89))
                     .shadow(color: .white.opacity(0.3), radius: 10, x: 0.0, y: 10)

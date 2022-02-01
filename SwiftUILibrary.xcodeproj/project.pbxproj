@@ -11,6 +11,7 @@
 		9254932D2783994500634846 /* PreferenceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254932C2783994500634846 /* PreferenceProtocol.swift */; };
 		92B8090B27A9D361003EAFEC /* BetterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B8090A27A9D361003EAFEC /* BetterTextField.swift */; };
 		92B8090E27A9D436003EAFEC /* ValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B8090D27A9D436003EAFEC /* ValidationState.swift */; };
+		92B8091127A9E816003EAFEC /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B8091027A9E816003EAFEC /* Shake.swift */; };
 		92C2A1DF278616B7007B451C /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2A1DE278616B7007B451C /* TutorialView.swift */; };
 		92C2A1E1278616EA007B451C /* TutorialCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2A1E0278616EA007B451C /* TutorialCore.swift */; };
 		92C2A1E327861767007B451C /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2A1E227861767007B451C /* TutorialViewModel.swift */; };
@@ -22,9 +23,7 @@
 		A516DF6B277EF01B005DC5F9 /* MaskViewBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DF67277EF01B005DC5F9 /* MaskViewBootcamp.swift */; };
 		A516DF6E277EF215005DC5F9 /* MatchedGeometryEffectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DF6D277EF215005DC5F9 /* MatchedGeometryEffectBootcamp.swift */; };
 		A516DF71277F0BB6005DC5F9 /* ButtonStyleBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DF70277F0BB6005DC5F9 /* ButtonStyleBootcamp.swift */; };
-		A5192B4427A1DE98008E7CB7 /* ValidatorPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5192B4327A1DE98008E7CB7 /* ValidatorPreferenceKey.swift */; };
 		A5192B4627A1DF4F008E7CB7 /* ValidatorPrepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5192B4527A1DF4F008E7CB7 /* ValidatorPrepView.swift */; };
-		A543ED8A27A07B6E0043C51E /* FloatingPlaceHolderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A543ED8927A07B6E0043C51E /* FloatingPlaceHolderTextField.swift */; };
 		A543ED8C27A08A810043C51E /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A543ED8B27A08A810043C51E /* Validator.swift */; };
 		A58401C727819C5000B84CD2 /* GeometryPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58401C627819C5000B84CD2 /* GeometryPreferenceKey.swift */; };
 		A58401CA2781A9F000B84CD2 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58401C92781A9F000B84CD2 /* View+Extension.swift */; };
@@ -39,6 +38,7 @@
 		9254932C2783994500634846 /* PreferenceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceProtocol.swift; sourceTree = "<group>"; };
 		92B8090A27A9D361003EAFEC /* BetterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterTextField.swift; sourceTree = "<group>"; };
 		92B8090D27A9D436003EAFEC /* ValidationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationState.swift; sourceTree = "<group>"; };
+		92B8091027A9E816003EAFEC /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 		92C2A1DE278616B7007B451C /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		92C2A1E0278616EA007B451C /* TutorialCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCore.swift; sourceTree = "<group>"; };
 		92C2A1E227861767007B451C /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
@@ -51,9 +51,7 @@
 		A516DF67277EF01B005DC5F9 /* MaskViewBootcamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskViewBootcamp.swift; sourceTree = "<group>"; };
 		A516DF6D277EF215005DC5F9 /* MatchedGeometryEffectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedGeometryEffectBootcamp.swift; sourceTree = "<group>"; };
 		A516DF70277F0BB6005DC5F9 /* ButtonStyleBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleBootcamp.swift; sourceTree = "<group>"; };
-		A5192B4327A1DE98008E7CB7 /* ValidatorPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorPreferenceKey.swift; sourceTree = "<group>"; };
 		A5192B4527A1DF4F008E7CB7 /* ValidatorPrepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorPrepView.swift; sourceTree = "<group>"; };
-		A543ED8927A07B6E0043C51E /* FloatingPlaceHolderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPlaceHolderTextField.swift; sourceTree = "<group>"; };
 		A543ED8B27A08A810043C51E /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		A58401C627819C5000B84CD2 /* GeometryPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryPreferenceKey.swift; sourceTree = "<group>"; };
 		A58401C92781A9F000B84CD2 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
@@ -90,8 +88,17 @@
 			children = (
 				92B8090A27A9D361003EAFEC /* BetterTextField.swift */,
 				92B8090D27A9D436003EAFEC /* ValidationState.swift */,
+				A543ED8B27A08A810043C51E /* Validator.swift */,
 			);
 			path = Rogonize;
+			sourceTree = "<group>";
+		};
+		92B8090F27A9E80D003EAFEC /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				92B8091027A9E816003EAFEC /* Shake.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		A516DF4B277EEFF4005DC5F9 = {
@@ -148,6 +155,7 @@
 		A5587837279D8C97005EE8EE /* UIElement */ = {
 			isa = PBXGroup;
 			children = (
+				92B8090F27A9E80D003EAFEC /* Animation */,
 				A5587838279D8CA2005EE8EE /* TextField */,
 			);
 			path = UIElement;
@@ -157,10 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				92B8090C27A9D403003EAFEC /* Rogonize */,
-				A543ED8927A07B6E0043C51E /* FloatingPlaceHolderTextField.swift */,
 				A5192B4527A1DF4F008E7CB7 /* ValidatorPrepView.swift */,
-				A543ED8B27A08A810043C51E /* Validator.swift */,
-				A5192B4327A1DE98008E7CB7 /* ValidatorPreferenceKey.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -256,7 +261,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				92C2A1DF278616B7007B451C /* TutorialView.swift in Sources */,
-				A543ED8A27A07B6E0043C51E /* FloatingPlaceHolderTextField.swift in Sources */,
 				92C2A1E1278616EA007B451C /* TutorialCore.swift in Sources */,
 				92C2A1E327861767007B451C /* TutorialViewModel.swift in Sources */,
 				A516DF6A277EF01B005DC5F9 /* BackgroundBootcamp.swift in Sources */,
@@ -274,7 +278,7 @@
 				92B8090B27A9D361003EAFEC /* BetterTextField.swift in Sources */,
 				A58401CC2781AFBA00B84CD2 /* AnchorPreference.swift in Sources */,
 				A516DF71277F0BB6005DC5F9 /* ButtonStyleBootcamp.swift in Sources */,
-				A5192B4427A1DE98008E7CB7 /* ValidatorPreferenceKey.swift in Sources */,
+				92B8091127A9E816003EAFEC /* Shake.swift in Sources */,
 				A516DF6E277EF215005DC5F9 /* MatchedGeometryEffectBootcamp.swift in Sources */,
 				9254932D2783994500634846 /* PreferenceProtocol.swift in Sources */,
 			);

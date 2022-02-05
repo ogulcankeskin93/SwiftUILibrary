@@ -14,8 +14,12 @@ struct ValidatorPrepView: View {
     
     var body: some View {
         VStack {
-            BetterTextField(text: $viewModel.inputText, validation: $viewModel.inputTextValid, placeHolder: "boom")
-
+            FloatingTextField(
+                text: $viewModel.inputText,
+                validation: $viewModel.inputTextValid,
+                placeHolder: "Email"
+            )
+            
             Button {
                 
             } label: {
@@ -23,7 +27,7 @@ struct ValidatorPrepView: View {
             }
             .disabled(viewModel.inputTextValid != .valid)
         }
-            
+        
     }
 }
 
@@ -35,13 +39,17 @@ extension ValidatorPrepView {
         @Published var inputText = "blop"
         @Published var inputTextValid: ValidationState?
         
+        
+        //        @Published var inputSecondText = "blop"
+        //        @Published var inputSecondTextValid: ValidationState?
+        
         init() {
             setupValidation()
         }
         
         private func setupValidation() {
             $inputText
-                .markInvalid(validateEmpty: true, via: [isNotEmpty, greaterThan_3])
+                .validate(validateEmpty: false, via: [Validation.isEmailValid(_:), Validation.passwordMatches8Chars(_:)])
                 .assign(to: \.inputTextValid, on: self)
                 .store(in: &cancellables)
         }

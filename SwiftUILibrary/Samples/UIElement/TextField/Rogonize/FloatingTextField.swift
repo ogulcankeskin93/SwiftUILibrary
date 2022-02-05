@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct BetterTextField: View {
+struct FloatingTextField: View {
     @Binding var text: String
     @Binding var validation: ValidationState?
     let placeHolder: String
     let image: String
-    let config: Config
-    
+    @ObservedObject private var config = FloatingLabelTextFieldConfig()
+
     @State private var isTapped = false
     // For error handling
     @State private var attemp = CGFloat(0)
@@ -31,12 +31,11 @@ struct BetterTextField: View {
         return false
     }
     
-    init(text: Binding<String>, validation: Binding<ValidationState?>, placeHolder: String, image: String = "", config: Config = .init()) {
+    init(text: Binding<String>, validation: Binding<ValidationState?>, placeHolder: String, image: String = "") {
         self._text = text
+        self._validation = validation
         self.placeHolder = placeHolder
         self.image = image
-        self.config = config
-        self._validation = validation
     }
     
     var body: some View {
@@ -65,7 +64,7 @@ struct BetterTextField: View {
                     .disableAutocorrection(true)
                     .background(alignment: .leading) {
                         if !innerCheck {
-                            Text("Boom")
+                            Text(placeHolder)
                                 .matchedGeometryEffect(id: "rectangleUnique", in: namespace)
                                 .foregroundColor(isTapped ? config.placeHolderHighlightedColor : config.placeHolderColor)
                         }
@@ -93,15 +92,17 @@ struct BetterTextField: View {
         )
         .overlay(alignment: .topLeading) {
             if validation?.isInvalid == true {
-                Text("todo desc")
+                if let errorMessage = validation?.errorMessage {
+                Text(errorMessage)
                     .background(Color.white.opacity(0.89))
                     .shadow(color: .white.opacity(0.3), radius: 10, x: 0.0, y: 10)
                     .foregroundColor(.red)
                     .padding(.horizontal, 16)
                     .offset(y: -12)
+                }
                 
             } else if innerCheck {
-                Text("Boom")
+                Text(placeHolder)
                     .background(Color.white.opacity(0.3))
                     .matchedGeometryEffect(id: "rectangleUnique", in: namespace)
                     .foregroundColor(isTapped ? config.placeHolderHighlightedColor : config.placeHolderColor)
@@ -121,11 +122,31 @@ struct BetterTextField: View {
     }
 }
 
-extension BetterTextField {
-    struct Config {
-        var backgroundColor: Color = .cyan.opacity(0.09)
-        var placeHolderColor: Color = .gray
-        var placeHolderHighlightedColor: Color = .accentColor
-        var errorColor: Color = .red
+extension FloatingTextField {
+    class FloatingLabelTextFieldConfig: ObservableObject {
+        @Published var backgroundColor: Color = .cyan.opacity(0.09)
+        @Published var placeHolderColor: Color = .gray
+        @Published var placeHolderHighlightedColor: Color = .accentColor
+        @Published var errorColor: Color = .red
+    }
+    
+    public func placeHolderColor(_ color: Color) -> Self {
+        config.placeHolderColor = color
+        return self
+    }
+    
+    public func backgroundColor(_ color: Color) -> Self {
+        config.backgroundColor = color
+        return self
+    }
+    
+    public func placeHolderHighlightedColor(_ color: Color) -> Self {
+        config.placeHolderHighlightedColor = color
+        return self
+    }
+    
+    public func errorColor(_ color: Color) -> Self {
+        config.errorColor = color
+        return self
     }
 }

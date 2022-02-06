@@ -15,6 +15,7 @@
 		92C2A1DF278616B7007B451C /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2A1DE278616B7007B451C /* TutorialView.swift */; };
 		92C2A1E1278616EA007B451C /* TutorialCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2A1E0278616EA007B451C /* TutorialCore.swift */; };
 		92C2A1E327861767007B451C /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C2A1E227861767007B451C /* TutorialViewModel.swift */; };
+		92E1808F27AFC71B002A08A8 /* ClosarEditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E1808E27AFC71B002A08A8 /* ClosarEditProfile.swift */; };
 		A516DF58277EEFF4005DC5F9 /* SwiftUILibraryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A516DF57277EEFF4005DC5F9 /* SwiftUILibraryApp.swift */; };
 		A516DF5C277EEFF7005DC5F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A516DF5B277EEFF7005DC5F9 /* Assets.xcassets */; };
 		A516DF5F277EEFF7005DC5F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A516DF5E277EEFF7005DC5F9 /* Preview Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		92C2A1DE278616B7007B451C /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		92C2A1E0278616EA007B451C /* TutorialCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCore.swift; sourceTree = "<group>"; };
 		92C2A1E227861767007B451C /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
+		92E1808E27AFC71B002A08A8 /* ClosarEditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosarEditProfile.swift; sourceTree = "<group>"; };
 		A516DF54277EEFF4005DC5F9 /* SwiftUILibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUILibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A516DF57277EEFF4005DC5F9 /* SwiftUILibraryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILibraryApp.swift; sourceTree = "<group>"; };
 		A516DF5B277EEFF7005DC5F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,14 +85,16 @@
 			path = Tutorial;
 			sourceTree = "<group>";
 		};
-		92B8090C27A9D403003EAFEC /* Rogonize */ = {
+		92B8090C27A9D403003EAFEC /* Closar */ = {
 			isa = PBXGroup;
 			children = (
+				92B8090F27A9E80D003EAFEC /* Animation */,
 				92B8090A27A9D361003EAFEC /* FloatingTextField.swift */,
 				92B8090D27A9D436003EAFEC /* ValidationState.swift */,
 				A543ED8B27A08A810043C51E /* Validator.swift */,
+				92E1808E27AFC71B002A08A8 /* ClosarEditProfile.swift */,
 			);
-			path = Rogonize;
+			path = Closar;
 			sourceTree = "<group>";
 		};
 		92B8090F27A9E80D003EAFEC /* Animation */ = {
@@ -155,7 +159,6 @@
 		A5587837279D8C97005EE8EE /* UIElement */ = {
 			isa = PBXGroup;
 			children = (
-				92B8090F27A9E80D003EAFEC /* Animation */,
 				A5587838279D8CA2005EE8EE /* TextField */,
 			);
 			path = UIElement;
@@ -164,7 +167,7 @@
 		A5587838279D8CA2005EE8EE /* TextField */ = {
 			isa = PBXGroup;
 			children = (
-				92B8090C27A9D403003EAFEC /* Rogonize */,
+				92B8090C27A9D403003EAFEC /* Closar */,
 				A5192B4527A1DF4F008E7CB7 /* ValidatorPrepView.swift */,
 			);
 			path = TextField;
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92C2A1DF278616B7007B451C /* TutorialView.swift in Sources */,
+				92E1808F27AFC71B002A08A8 /* ClosarEditProfile.swift in Sources */,
 				92C2A1E1278616EA007B451C /* TutorialCore.swift in Sources */,
 				92C2A1E327861767007B451C /* TutorialViewModel.swift in Sources */,
 				A516DF6A277EF01B005DC5F9 /* BackgroundBootcamp.swift in Sources */,

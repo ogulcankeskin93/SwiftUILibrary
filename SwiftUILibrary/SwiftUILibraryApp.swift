@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUILibraryApp: App {
     var body: some Scene {
         WindowGroup {
-            ValidatorPrepView()
+            ClosarEditProfile()
         }
     }
 }

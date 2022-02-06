@@ -69,8 +69,10 @@ enum Validation {
         }
     }
     
-    public static func isNotEmpty(_ string: String) -> Bool {
-        !string.isEmpty
+    public static func isNotEmpty(_ string: String) throws -> Void {
+        if string.isEmpty {
+            throw ValidationError.invalid("Can not be empty")
+        }
     }
 }
 

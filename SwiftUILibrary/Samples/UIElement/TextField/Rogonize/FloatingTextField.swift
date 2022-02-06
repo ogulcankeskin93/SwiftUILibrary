@@ -19,16 +19,14 @@ struct FloatingTextField: View {
     @State private var attemp = CGFloat(0)
     
     @Namespace var namespace
+    private let floatAnimationId = "floatMatchedGeo"
     
-    var innerCheck: Bool {
-        if isTapped {
+    private var floatPlaceholder: Bool {
+        if isTapped || !text.isEmpty {
             return true
         } else {
-            if !text.isEmpty {
-                return true
-            }
+            return false
         }
-        return false
     }
     
     init(text: Binding<String>, validation: Binding<ValidationState?>, placeHolder: String, image: String = "") {
@@ -52,7 +50,6 @@ struct FloatingTextField: View {
                         }
                     },
                     onCommit: {
-                        print("onCommit")
                         withAnimation(.easeOut) {
                             if text.isEmpty {
                                 isTapped = false
@@ -63,16 +60,16 @@ struct FloatingTextField: View {
                     .textInputAutocapitalization(.never)
                     .disableAutocorrection(true)
                     .background(alignment: .leading) {
-                        if !innerCheck {
+                        if !floatPlaceholder {
                             Text(placeHolder)
-                                .matchedGeometryEffect(id: "rectangleUnique", in: namespace)
+                                .matchedGeometryEffect(id: floatAnimationId, in: namespace)
                                 .foregroundColor(isTapped ? config.placeHolderHighlightedColor : config.placeHolderColor)
                         }
                     }
                 
                 if !image.isEmpty {
                     Button {
-                        
+                        // TODO: on image click
                     } label: {
                         Image(systemName: image)
                     }
@@ -91,7 +88,7 @@ struct FloatingTextField: View {
                 )
         )
         .overlay(alignment: .topLeading) {
-            if validation?.isInvalid == true {
+            if case .invalid(_) = validation {
                 if let errorMessage = validation?.errorMessage {
                 Text(errorMessage)
                     .background(Color.white.opacity(0.89))
@@ -101,10 +98,10 @@ struct FloatingTextField: View {
                     .offset(y: -12)
                 }
                 
-            } else if innerCheck {
+            } else if floatPlaceholder {
                 Text(placeHolder)
                     .background(Color.white.opacity(0.3))
-                    .matchedGeometryEffect(id: "rectangleUnique", in: namespace)
+                    .matchedGeometryEffect(id: floatAnimationId, in: namespace)
                     .foregroundColor(isTapped ? config.placeHolderHighlightedColor : config.placeHolderColor)
                     .padding(.horizontal, 16)
                     .offset(y: -8)
@@ -113,7 +110,7 @@ struct FloatingTextField: View {
         .padding(.horizontal, 16)
         .modifier(Shake(animatableData: attemp))
         .onChange(of: validation) { newValue in
-            if newValue != .valid {
+            if case .invalid(_) = newValue {
                 withAnimation {
                     self.attemp += 1
                 }

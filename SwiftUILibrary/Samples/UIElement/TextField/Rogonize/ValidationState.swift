@@ -9,7 +9,7 @@ import Combine
 import Foundation
 
 public enum ValidationState: Hashable, Equatable {
-    case valid
+    case valid // MARK: we dont use this, nil is enough for valid case.
     case invalid(String?)
     
     public var isInvalid: Bool {
@@ -31,11 +31,8 @@ public enum ValidationState: Hashable, Equatable {
 }
 
 extension Publisher where Output == String {
-    /// Performs validation on a String input and only forwards the invalid state, not the valid state.
-    /// Use to validate input fields you not want to explicity mark as valid (e.g. green).
-    /// - Parameter validation: the validation function
-    /// - Returns: Publisher
-    func validateCustom(
+
+    func customValidate(
         validateEmpty: Bool = false,
         via validation: @escaping (String) -> Bool,
         errorMessage: String? = nil
@@ -55,8 +52,7 @@ extension Publisher where Output == String {
     
     func validate(
         validateEmpty: Bool = false,
-        via validators: [Validator],
-        errorMessage: String? = nil
+        via validators: [Validator]
     ) -> AnyPublisher<ValidationState?, Failure> {
         map { string -> ValidationState? in
             if (!validateEmpty && string.isEmpty) {

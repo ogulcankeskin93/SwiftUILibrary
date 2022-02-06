@@ -25,7 +25,7 @@ struct ValidatorPrepView: View {
             } label: {
                 Text("Boom")
             }
-            .disabled(viewModel.inputTextValid != .valid)
+            .disabled(viewModel.inputTextValid != nil)
         }
         
     }
@@ -38,10 +38,6 @@ extension ValidatorPrepView {
         
         @Published var inputText = "blop"
         @Published var inputTextValid: ValidationState?
-        
-        
-        //        @Published var inputSecondText = "blop"
-        //        @Published var inputSecondTextValid: ValidationState?
         
         init() {
             setupValidation()

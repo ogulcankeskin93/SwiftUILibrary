@@ -9,7 +9,6 @@ import SwiftUI
 
 fileprivate struct OverallSizeKey: SizePreferenceKey {}
 
-
 public struct TutorialContentView<Content: View>: View {
     @State private var overallSize: CGSize = .zero
     private let content: Content

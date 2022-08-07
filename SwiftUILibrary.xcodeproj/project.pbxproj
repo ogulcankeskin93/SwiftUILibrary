@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921C17F6289ABCF10047067F /* TaskBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C17F5289ABCF10047067F /* TaskBootcamp.swift */; };
 		9254932B27837FF700634846 /* TutorialContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254932A27837FF700634846 /* TutorialContentView.swift */; };
 		9254932D2783994500634846 /* PreferenceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254932C2783994500634846 /* PreferenceProtocol.swift */; };
 		92A6F36C286E2922004F5C73 /* AsyncAwaitBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6F36B286E2922004F5C73 /* AsyncAwaitBootcamp.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		921C17F5289ABCF10047067F /* TaskBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBootcamp.swift; sourceTree = "<group>"; };
 		925493282783727E00634846 /* PreferenceDocumentation.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PreferenceDocumentation.md; sourceTree = "<group>"; };
 		9254932A27837FF700634846 /* TutorialContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialContentView.swift; sourceTree = "<group>"; };
 		9254932C2783994500634846 /* PreferenceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceProtocol.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				92A6F36B286E2922004F5C73 /* AsyncAwaitBootcamp.swift */,
+				921C17F5289ABCF10047067F /* TaskBootcamp.swift */,
 			);
 			path = Concurrency;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				A516DF6B277EF01B005DC5F9 /* MaskViewBootcamp.swift in Sources */,
 				A58401C727819C5000B84CD2 /* GeometryPreferenceKey.swift in Sources */,
 				9254932B27837FF700634846 /* TutorialContentView.swift in Sources */,
+				921C17F6289ABCF10047067F /* TaskBootcamp.swift in Sources */,
 				92B8090E27A9D436003EAFEC /* ValidationState.swift in Sources */,
 				A543ED8C27A08A810043C51E /* Validator.swift in Sources */,
 				A516DF58277EEFF4005DC5F9 /* SwiftUILibraryApp.swift in Sources */,

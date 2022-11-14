@@ -25,7 +25,7 @@ struct AsyncAwaitBootcamp: View {
             Task {
                 await viewModel.addAuthor()
                 await viewModel.addSomething()
-                
+                await viewModel.addAuthorMian()
                 let final = "Final: \(Thread.current)"
                 viewModel.dataArray.append(final)
             }
@@ -82,6 +82,12 @@ extension AsyncAwaitBootcamp {
                 let something3 = "Something 2: \(Thread.current)"
                 self.dataArray.append(something3)
             })
+        }
+
+
+        func addAuthorMian() async {
+            let author = "Author 1: \(Thread.current)"
+            self.dataArray.append(author)
         }
     }
 }

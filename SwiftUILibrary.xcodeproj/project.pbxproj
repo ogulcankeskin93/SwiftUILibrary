@@ -11,6 +11,7 @@
 		9254932B27837FF700634846 /* TutorialContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254932A27837FF700634846 /* TutorialContentView.swift */; };
 		9254932D2783994500634846 /* PreferenceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254932C2783994500634846 /* PreferenceProtocol.swift */; };
 		92A6F36C286E2922004F5C73 /* AsyncAwaitBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6F36B286E2922004F5C73 /* AsyncAwaitBootcamp.swift */; };
+		92B640D329217B4100D5A67D /* AsyncLetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B640D229217B4100D5A67D /* AsyncLetBootcamp.swift */; };
 		92B8090B27A9D361003EAFEC /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B8090A27A9D361003EAFEC /* FloatingTextField.swift */; };
 		92B8090E27A9D436003EAFEC /* ValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B8090D27A9D436003EAFEC /* ValidationState.swift */; };
 		92B8091127A9E816003EAFEC /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B8091027A9E816003EAFEC /* Shake.swift */; };
@@ -41,6 +42,7 @@
 		9254932A27837FF700634846 /* TutorialContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialContentView.swift; sourceTree = "<group>"; };
 		9254932C2783994500634846 /* PreferenceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceProtocol.swift; sourceTree = "<group>"; };
 		92A6F36B286E2922004F5C73 /* AsyncAwaitBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitBootcamp.swift; sourceTree = "<group>"; };
+		92B640D229217B4100D5A67D /* AsyncLetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncLetBootcamp.swift; sourceTree = "<group>"; };
 		92B8090A27A9D361003EAFEC /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		92B8090D27A9D436003EAFEC /* ValidationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationState.swift; sourceTree = "<group>"; };
 		92B8091027A9E816003EAFEC /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				92A6F36B286E2922004F5C73 /* AsyncAwaitBootcamp.swift */,
 				921C17F5289ABCF10047067F /* TaskBootcamp.swift */,
+				92B640D229217B4100D5A67D /* AsyncLetBootcamp.swift */,
 			);
 			path = Concurrency;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92C2A1DF278616B7007B451C /* TutorialView.swift in Sources */,
+				92B640D329217B4100D5A67D /* AsyncLetBootcamp.swift in Sources */,
 				92E1808F27AFC71B002A08A8 /* ClosarEditProfile.swift in Sources */,
 				92C2A1E1278616EA007B451C /* TutorialCore.swift in Sources */,
 				92C2A1E327861767007B451C /* TutorialViewModel.swift in Sources */,

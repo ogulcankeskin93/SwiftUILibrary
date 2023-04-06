@@ -10,6 +10,8 @@
 		921C17F6289ABCF10047067F /* TaskBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C17F5289ABCF10047067F /* TaskBootcamp.swift */; };
 		9254932B27837FF700634846 /* TutorialContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254932A27837FF700634846 /* TutorialContentView.swift */; };
 		9254932D2783994500634846 /* PreferenceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254932C2783994500634846 /* PreferenceProtocol.swift */; };
+		925DF85D29B744670003A2B3 /* UIKit+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DF85C29B744670003A2B3 /* UIKit+Preview.swift */; };
+		925DF85F29B745750003A2B3 /* UIKit+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DF85E29B745750003A2B3 /* UIKit+Layout.swift */; };
 		92A6F36C286E2922004F5C73 /* AsyncAwaitBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6F36B286E2922004F5C73 /* AsyncAwaitBootcamp.swift */; };
 		92B640D329217B4100D5A67D /* AsyncLetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B640D229217B4100D5A67D /* AsyncLetBootcamp.swift */; };
 		92B8090B27A9D361003EAFEC /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B8090A27A9D361003EAFEC /* FloatingTextField.swift */; };
@@ -41,6 +43,8 @@
 		925493282783727E00634846 /* PreferenceDocumentation.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PreferenceDocumentation.md; sourceTree = "<group>"; };
 		9254932A27837FF700634846 /* TutorialContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialContentView.swift; sourceTree = "<group>"; };
 		9254932C2783994500634846 /* PreferenceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceProtocol.swift; sourceTree = "<group>"; };
+		925DF85C29B744670003A2B3 /* UIKit+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Preview.swift"; sourceTree = "<group>"; };
+		925DF85E29B745750003A2B3 /* UIKit+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Layout.swift"; sourceTree = "<group>"; };
 		92A6F36B286E2922004F5C73 /* AsyncAwaitBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitBootcamp.swift; sourceTree = "<group>"; };
 		92B640D229217B4100D5A67D /* AsyncLetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncLetBootcamp.swift; sourceTree = "<group>"; };
 		92B8090A27A9D361003EAFEC /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				A58401C92781A9F000B84CD2 /* View+Extension.swift */,
+				925DF85C29B744670003A2B3 /* UIKit+Preview.swift */,
+				925DF85E29B745750003A2B3 /* UIKit+Layout.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -289,6 +295,7 @@
 				A516DF6A277EF01B005DC5F9 /* BackgroundBootcamp.swift in Sources */,
 				A516DF69277EF01B005DC5F9 /* DotAnimation.swift in Sources */,
 				A58401CE2781C23900B84CD2 /* AdvanceGrid.swift in Sources */,
+				925DF85D29B744670003A2B3 /* UIKit+Preview.swift in Sources */,
 				A58401CA2781A9F000B84CD2 /* View+Extension.swift in Sources */,
 				A5192B4627A1DF4F008E7CB7 /* ValidatorPrepView.swift in Sources */,
 				A516DF6B277EF01B005DC5F9 /* MaskViewBootcamp.swift in Sources */,
@@ -304,6 +311,7 @@
 				A516DF71277F0BB6005DC5F9 /* ButtonStyleBootcamp.swift in Sources */,
 				92B8091127A9E816003EAFEC /* Shake.swift in Sources */,
 				A516DF6E277EF215005DC5F9 /* MatchedGeometryEffectBootcamp.swift in Sources */,
+				925DF85F29B745750003A2B3 /* UIKit+Layout.swift in Sources */,
 				9254932D2783994500634846 /* PreferenceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

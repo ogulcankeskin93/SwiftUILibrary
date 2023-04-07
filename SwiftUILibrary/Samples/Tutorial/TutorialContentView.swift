@@ -27,9 +27,8 @@ public struct TutorialContentView<Content: View>: View {
                         
                         ForEach(0..<preferences.count) { index in
                             let tutorialContent = preferences[index]
-                            if !tutorialContent.isHidden,
-                               let bound = geometry[tutorialContent.bounds],
-                               let item = tutorialContent.item {
+                            if !tutorialContent.isHidden, let item = tutorialContent.item {
+                               let bound = geometry[tutorialContent.bounds]
                                 switch item.location {
                                 case .top:
                                     topContent(

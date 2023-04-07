@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct SwiftUILibraryApp: App {
+    @StateObject private var viewModel = LocationViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ClosarEditProfile()
+//            ClosarEditProfile()
+            LocationView()
+                .environmentObject(viewModel)
         }
     }
 }

@@ -21,10 +21,7 @@ public struct TutorialContentView<Content: View>: View {
         content
             .overlayPreferenceValue(TutorialPreferenceKey.self) { preferences in
                 GeometryReader { geometry in
-                    ZStack {
-//                        Color.gray.opacity(0.6)
-//                            .ignoresSafeArea()
-                        
+                    ZStack {                        
                         ForEach(0..<preferences.count) { index in
                             let tutorialContent = preferences[index]
                             if !tutorialContent.isHidden, let item = tutorialContent.item {

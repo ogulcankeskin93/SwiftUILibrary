@@ -21,6 +21,9 @@
 		925DF85D29B744670003A2B3 /* UIKit+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DF85C29B744670003A2B3 /* UIKit+Preview.swift */; };
 		925DF85F29B745750003A2B3 /* UIKit+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DF85E29B745750003A2B3 /* UIKit+Layout.swift */; };
 		92A6F36C286E2922004F5C73 /* AsyncAwaitBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6F36B286E2922004F5C73 /* AsyncAwaitBootcamp.swift */; };
+		92ACD1E72A6C62AE0082709A /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACD1E62A6C62AE0082709A /* Profile.swift */; };
+		92ACD1E92A6C63F60082709A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACD1E82A6C63F60082709A /* Home.swift */; };
+		92ACD1EB2A6C65A80082709A /* AnchorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ACD1EA2A6C65A80082709A /* AnchorHelper.swift */; };
 		92B640D329217B4100D5A67D /* AsyncLetBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B640D229217B4100D5A67D /* AsyncLetBootcamp.swift */; };
 		92B8090B27A9D361003EAFEC /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B8090A27A9D361003EAFEC /* FloatingTextField.swift */; };
 		92B8090E27A9D436003EAFEC /* ValidationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B8090D27A9D436003EAFEC /* ValidationState.swift */; };
@@ -61,6 +64,9 @@
 		925DF85C29B744670003A2B3 /* UIKit+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Preview.swift"; sourceTree = "<group>"; };
 		925DF85E29B745750003A2B3 /* UIKit+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Layout.swift"; sourceTree = "<group>"; };
 		92A6F36B286E2922004F5C73 /* AsyncAwaitBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitBootcamp.swift; sourceTree = "<group>"; };
+		92ACD1E62A6C62AE0082709A /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		92ACD1E82A6C63F60082709A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		92ACD1EA2A6C65A80082709A /* AnchorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorHelper.swift; sourceTree = "<group>"; };
 		92B640D229217B4100D5A67D /* AsyncLetBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncLetBootcamp.swift; sourceTree = "<group>"; };
 		92B8090A27A9D361003EAFEC /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		92B8090D27A9D436003EAFEC /* ValidationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationState.swift; sourceTree = "<group>"; };
@@ -165,6 +171,24 @@
 			path = Concurrency;
 			sourceTree = "<group>";
 		};
+		92ACD1E32A6C62330082709A /* ViewSamples */ = {
+			isa = PBXGroup;
+			children = (
+				92ACD1E52A6C62980082709A /* NavigationHeroAnimation */,
+			);
+			path = ViewSamples;
+			sourceTree = "<group>";
+		};
+		92ACD1E52A6C62980082709A /* NavigationHeroAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				92ACD1E62A6C62AE0082709A /* Profile.swift */,
+				92ACD1E82A6C63F60082709A /* Home.swift */,
+				92ACD1EA2A6C65A80082709A /* AnchorHelper.swift */,
+			);
+			path = NavigationHeroAnimation;
+			sourceTree = "<group>";
+		};
 		92B8090C27A9D403003EAFEC /* Closar */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +230,7 @@
 			children = (
 				A516DF57277EEFF4005DC5F9 /* SwiftUILibraryApp.swift */,
 				923812EA29DF13C700FD7C1C /* Assets.xcassets */,
+				92ACD1E32A6C62330082709A /* ViewSamples */,
 				A516DF6F277EF3E6005DC5F9 /* Samples */,
 				A58401C82781A9DB00B84CD2 /* Extension */,
 				A516DF5D277EEFF7005DC5F9 /* Preview Content */,
@@ -369,6 +394,7 @@
 				921C17F6289ABCF10047067F /* TaskBootcamp.swift in Sources */,
 				92B8090E27A9D436003EAFEC /* ValidationState.swift in Sources */,
 				923812FD29DF3D8F00FD7C1C /* Test.swift in Sources */,
+				92ACD1E92A6C63F60082709A /* Home.swift in Sources */,
 				A543ED8C27A08A810043C51E /* Validator.swift in Sources */,
 				A516DF58277EEFF4005DC5F9 /* SwiftUILibraryApp.swift in Sources */,
 				A58401D02781D2F300B84CD2 /* test.swift in Sources */,
@@ -378,6 +404,8 @@
 				92B8091127A9E816003EAFEC /* Shake.swift in Sources */,
 				A516DF6E277EF215005DC5F9 /* MatchedGeometryEffectBootcamp.swift in Sources */,
 				923812F329DF149700FD7C1C /* LocationsDataService.swift in Sources */,
+				92ACD1EB2A6C65A80082709A /* AnchorHelper.swift in Sources */,
+				92ACD1E72A6C62AE0082709A /* Profile.swift in Sources */,
 				925DF85F29B745750003A2B3 /* UIKit+Layout.swift in Sources */,
 				923812FB29DF1F9100FD7C1C /* LocationPreviewView.swift in Sources */,
 				9254932D2783994500634846 /* PreferenceProtocol.swift in Sources */,
@@ -519,6 +547,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -548,6 +577,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

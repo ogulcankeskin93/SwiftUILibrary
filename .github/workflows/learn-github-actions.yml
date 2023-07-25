@@ -1,6 +1,12 @@
 name: learn-github-actions
+
 run-name: ${{ github.actor }} is learning GitHub Actions
+
 on: push
+
+env:
+  DAY_OF_WEEK: Monday
+  
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
@@ -11,3 +17,7 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
+      - name: "Say Hello Mona it's Monday"
+        run: echo "$First_Name. Today is $DAY_OF_WEEK!"
+        env:
+          First_Name: Mona
